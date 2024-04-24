@@ -54,7 +54,7 @@ function generateMarkdown(data) {
   ## Testing
   
 
-  ${renderLicenseSection(data.license)}`;
+  `;
 }
 
 module.exports = generateMarkdown;
