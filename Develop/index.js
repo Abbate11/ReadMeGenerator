@@ -45,10 +45,9 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    const string = generateMarkdown(answers)
-
-    fs.writeFile('readme.md', string, (err) => {
-        if (err) console.log(err);
+   
+    fs.writeFileSync(fileName, data, (err) => {
+        if (err) throw err;
     })
 };
 
@@ -59,6 +58,7 @@ function init() {
         // pass answers to big string
         const string = generateMarkdown(answers);
         //write file with big string
+        console.log(answers)
         writeToFile('readme.md', string)
     })
 };
